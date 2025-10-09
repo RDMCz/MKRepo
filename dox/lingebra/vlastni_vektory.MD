@@ -56,7 +56,7 @@ det ⎢           ⎥ = (-35-λ)(30-λ)+39·26 = -1050+35λ-30λ+λ²+1014 = λ�
 
 ### Rychlejší způsob určení vlastních čísel pro matice 2×2
 
-![$$\begin{align*}\lambda_{1,2}&=m\pm\sqrt{m^2-p}\\m&:\text{prumer hlavni diagonaly matice}\\p&:\text{determinant matice}\\m&=\frac{-35+30}{2}=-\frac{5}{2}\\p&=(-35\cdot30)-(39\cdot(-26))=36\\\lambda_{1,2}&=-\frac{5}{2}\pm\sqrt{\frac{25}{4}+\frac{144}{4}}\\&=-\frac{5}{2}\pm\sqrt{\frac{169}{4}}\\&=-\frac{5}{2}\pm\frac{13}{2}\\&=\frac{-5\pm13}{2}=\begin{cases}-9\\+4\end{cases}\end{align*}$$](../../svg/lingebra/dox-lingebra-vlastni_vektory-a2a6a862bb.svg)
+<img alt="λ₁₂=m±√(m²−p)" src="../../svg/lingebra/dox-lingebra-vlastni_vektory-a2a6a862bb.png" width="300">
 
 ## Příklady
 
@@ -66,6 +66,6 @@ values = [-2, -1, 1, 2]
 mx_v = sp.Matrix([[1, random.choice(values)], [0, 1]]) * sp.Matrix([[1, 0], [random.choice(values), 1]])
 mx = mx_v * sp.Matrix([[random.randint(-10, 10), 0], [0, random.randint(-10, 10)]]) * mx_v.inv()
 print(f"Určete vlastní čísla a jim odpovídající vlastní vektory matice:\n{sp.pretty(mx)}\n")
-eigenvecs = "".join(f"  Vlastní číslo: {tup[0]}\nVlastní vektory: {[list(x) for x in tup[2]]}\n\n" for tup in mx.eigenvects())
+eigenvecs = "".join(f"  Vl. číslo: {tup[0]}\nVl. vektory: {[list(x) for x in tup[2]]}\n\n" for tup in mx.eigenvects())
 print(eigenvecs)
 ```

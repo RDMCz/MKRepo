@@ -1,5 +1,8 @@
 # Rekurentní vztahy
 
+> [!WARNING]  
+> Tento postup pokrývá pouze případ, kdy se kromě _áček_ v zadání nachází pouze konstanta (30) a charakteristický mnohočlen nemá vícenásobné/komplexní kořeny. V těchto případech se postup liší. &ensp;TODO: zobecnit
+
 Najděte 52. člen posloupnosti (𝑎<sub>𝑛</sub>)<sub>𝑛≥1</sub> definované tak, že:
 
 𝑎₁ = 3 <br>
