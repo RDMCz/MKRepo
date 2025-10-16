@@ -58,6 +58,10 @@ det ⎢           ⎥ = (-35-λ)(30-λ)+39·26 = -1050+35λ-30λ+λ²+1014 = λ�
 
 <img alt="λ₁₂=m±√(m²−p)" src="../../svg/lingebra/dox-lingebra-vlastni_vektory-a2a6a862bb.png" width="300">
 
+### Rychlejší způsob určení vlastních vektorů pro matice 2×2
+
+Pokud počítáme s maticí o rozměru 2×2 (což je jediný rozměr, kde vlastní čísla a vlastní vektory dokážeme spolehlivě spočítat na papíře), můžeme si dovolit další „trik“. Jakmile dosadíme vlastní číslo do matice 𝐹<sub>_λ_</sub>, tak vždy platí, že dva řádky v matici jsou lineárně závislé. Při gaussování tedy vždy jeden řádek vyjde nulový. Můžeme proto gaussování vynechat a jeden řádek si prostě vybrat, případně zkrátit. Při volbě parametru 𝑥₂ = 𝑡 je navíc algoritmus pro dopočítání 𝑥₁ vždy stejný. Pro (𝑎𝑥₁ + 𝑏𝑥₂ = 0) ∧ (𝑥₂ = 𝑡) platí, že (𝑥₁ = (-𝑏/𝑎)𝑡).
+
 ## Příklady
 
 ```py
