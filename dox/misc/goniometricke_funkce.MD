@@ -1,28 +1,28 @@
-# Goniometrické funkce
+# Přehled goniometrických funkcí
 
 <br>
 
 Sinus|&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;|Arkus sinus
 :-:|---|:-:
-![sinus](../../svg/misc/gfce_sinus.svg) || ![arcsinus](../../svg/misc/gfce_arcsinus.svg)
+![sinus](../../svg/misc/gfce_sinus.svg)||![arcsinus](../../svg/misc/gfce_arcsinus.svg)
 
 <br>
 
 Kosinus|&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;|Arkus kosinus
 :-:|---|:-:
-![cosinus](../../svg/misc/gfce_cosinus.svg) || ![arccosinus](../../svg/misc/gfce_arccosinus.svg)
+![cosinus](../../svg/misc/gfce_cosinus.svg)||![arccosinus](../../svg/misc/gfce_arccosinus.svg)
 
 <br>
 
 Tangens|&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;|Arkus tangens
 :-:|---|:-:
-![tangens](../../svg/misc/gfce_tangens.svg) || ![arctangens](../../svg/misc/gfce_arctangens.svg)
+![tangens](../../svg/misc/gfce_tangens.svg)||![arctangens](../../svg/misc/gfce_arctangens.svg)
 
 <br>
 
 Kotangens|&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;|Arkus kotangens
 :-:|---|:-:
-![cotangens](../../svg/misc/gfce_cotangens.svg) || ![arccotangens](../../svg/misc/gfce_arccotangens.svg)
+![cotangens](../../svg/misc/gfce_cotangens.svg)||![arccotangens](../../svg/misc/gfce_arccotangens.svg)
 
 <br>
 
@@ -43,8 +43,10 @@ Kotangens|&ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp; &ensp;|
 
 <br>
 
-<!-- $$
-\begin{align}
+<!--
+sin
+$$
+\begin{align*}
 D_{\sin}&=ℝ \\
 H_{\sin}&=\langle-1;1\rangle \\
 \\
@@ -52,10 +54,11 @@ H_{\sin}&=\langle-1;1\rangle \\
 \int \! \sin{x} \, \mathrm{d}x&=-\cos{x}+c \\
 \\
 \sin{(2x)}&=2\sin{x}\cos{x}
-\end{align}
+\end{align*}
 $$
+cos
 $$
-\begin{align}
+\begin{align*}
 D_{\cos}&=ℝ \\
 H_{\cos}&=\langle-1;1\rangle \\
 \\
@@ -64,57 +67,64 @@ H_{\cos}&=\langle-1;1\rangle \\
 \\
 \cos{(2x)}&=\cos^2{x}-\sin^2{x} \\
 1&=\sin^2{x}+\cos^2{x}
-\end{align}
+\end{align*}
 $$
+tg
 $$
-\begin{align}
-D_{\mathrm{tg}}&=ℝ \smallsetminus \{ \frac{\pi}{2}+k\pi \} \\
+\begin{align*}
+D_{\mathrm{tg}}&=ℝ \smallsetminus \left\{ \frac{\pi}{2}+k\pi \right\} \\
 H_{\mathrm{tg}}&=ℝ \\
 \\
 (\mathrm{tg}\ x)'&=\frac{1}{\cos^2{x}} \\
 \\
 \mathrm{tg}\ x&=\frac{\sin{x}}{\cos{x}}
-\end{align}
+\end{align*}
 $$
+cotg
 $$
-\begin{align}
+\begin{align*}
 D_{\mathrm{cotg}}&=ℝ \smallsetminus \{ k\pi \} \\
 H_{\mathrm{cotg}}&=ℝ \\
 \\
 (\mathrm{cotg}\ x)'&=\frac{-1}{\sin^2{x}} \\
 \\
 \mathrm{cotg}\ x&=\frac{\cos{x}}{\sin{x}}
-\end{align}
+\end{align*}
 $$
+arcsin
 $$
-\begin{align}
+\begin{align*}
 D_{\arcsin}&=\langle-1;1\rangle \\
-H_{\arcsin}&=\langle -\frac{\pi}{2};\frac{\pi}{2} \rangle \\
+H_{\arcsin}&=\left\langle -\frac{\pi}{2};\frac{\pi}{2} \right\rangle \\
 \\
 (\arcsin{x})'&=\frac{1}{\sqrt{1-x^2}}
-\end{align}
+\end{align*}
 $$
+arccos
 $$
-\begin{align}
+\begin{align*}
 D_{\arccos}&=\langle-1;1\rangle \\
 H_{\arccos}&=\langle 0;\pi \rangle \\
 \\
 (\arccos{x})'&=\frac{-1}{\sqrt{1-x^2}}
-\end{align}
+\end{align*}
 $$
+arctg
 $$
-\begin{align}
+\begin{align*}
 D_{\mathrm{arctg}}&=ℝ \\
-H_{\mathrm{arctg}}&=(-\frac{\pi}{2};\frac{\pi}{2}) \\
+H_{\mathrm{arctg}}&=\left(-\frac{\pi}{2};\frac{\pi}{2}\right) \\
 \\
 (\mathrm{arctg}\ x)'&=\frac{1}{1+x^2}
-\end{align}
+\end{align*}
 $$
+arccotg
 $$
-\begin{align}
+\begin{align*}
 D_{\mathrm{arccotg}}&=ℝ \\
 H_{\mathrm{arccotg}}&=(0;\pi) \\
 \\
 (\mathrm{arccotg}\ x)'&=\frac{-1}{1+x^2}
-\end{align}
-$$ -->
+\end{align*}
+$$
+-->

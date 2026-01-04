@@ -4,10 +4,10 @@
 * Číslo je uloženo jako 𝐴 = (-1)<sup>𝑆</sup> ⋅ 𝑀 ⋅ 2<sup>𝐸-_bias_</sup>
 * Mantisa je vždy „_jedna celá něco_“, proto se jednička neukládá (je vždy stejná) a ukládá se pouze lomená část mantisy
 
-bitů|_Sign_ 𝑆|_Exponent_ 𝐸|_Mantissa_ 𝑀|_bias_ 2<sup>𝐸-1</sup>-1
----|---|---|---|---
-32|= 1|+ 8|+ 23|(127)
-64|= 1|+ 11|+ 52|(1023)
+alias|bitů||_sign_ 𝑆|_exponent_ 𝐸|_mantissa_ 𝑀||_bias_ = 2<sup>bitů(𝐸)-1</sup>-1
+---|--:|---|--:|--:|--:|---|--:
+`float`|32||1 bit|8 bitů|23 bitů||127
+`double`|64||1 bit|11 bitů|52 bitů||1023
 
 ## Příklady
 

@@ -17,7 +17,8 @@
 ## _Ostatní_
 
 * [Apriori – hledání asociačních pravidel](./dox/misc/apriori.MD)
-* [Goniometrické funkce](./dox/misc/goniometricke_funkce.MD)
+* [Goniometrické funkce – přehled](./dox/misc/goniometricke_funkce.MD)
 * [IEEE 754 převody](./dox/misc/ieee754.MD)
+* [Rozklad na parciální zlomky](./dox/misc/rozklad_parcialni_zlomky.MD)
 
-<br>Sepsáno v letech 2021–2025. Použití na vlastní nebezpečí.
+<br>Sepsáno v letech 2021–2026. Použití na vlastní nebezpečí.
