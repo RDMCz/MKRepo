@@ -24,4 +24,10 @@ Jak dopočítat konstanty? Rovnici, která nám vyšla, celou vynásobíme půvo
 
 Jak odvodit soustavu rovnic? Na levé straně máme tři členy – budou tři rovnice. Koeficient u členu 𝑥² je 1, a první rovnice proto bude `1 = koeficienty u členů s 𝑥² na pravé straně`. A tak dále.
 
-Tip na konec: narazíme-li ve jmenovateli na 𝑥², můžeme na něj pohlížet jako na (𝑥 - 0)².
+* Tipy na konec:
+  
+  * Narazíme-li ve jmenovateli na 𝑥², můžeme na něj pohlížet jako na (𝑥 - 0)²
+  
+  * Máme-li ve jmenovateli výraz <b>-</b>𝑎𝑥²±𝑏𝑥±𝑐, který se teprve pomocí kvadratické rovnice pokusíme rozložit na součin dvou dvojčlenů, může se vyplatit vynásobit čitatel a jmenovatel minus jedničkou
+
+//TODO

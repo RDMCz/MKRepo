@@ -2,12 +2,12 @@
 
 ## Diskrétní matematika
 
-* [Rekurentní vztahy](./dox/discrete/rekurentni_vztahy.MD)
 * [Kanonické rozklady a Eukleidův algoritmus](./dox/discrete/kr_a_eukleides.MD)
 * [Bézoutova rovnost, Diofantická rovnice, Řetězový zlomek](./dox/discrete/retezovy_zlomek.MD)
 * [Kongruence a Čínská věta o zbytku](./dox/discrete/kongruence.MD)
 * [Eulerova funkce a Eulerova věta](./dox/discrete/euler.MD)
 * [Modulární aritmetika ve WolframAlpha](./dox/discrete/wolfram_modulus.MD)
+* [Rekurentní vztahy a vytvořující funkce](./dox/discrete/rekurentni_vztahy.MD)
 
 ## Lineární algebra
 
