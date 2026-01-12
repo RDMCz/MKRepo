@@ -24,10 +24,26 @@ Jak dopočítat konstanty? Rovnici, která nám vyšla, celou vynásobíme půvo
 
 Jak odvodit soustavu rovnic? Na levé straně máme tři členy – budou tři rovnice. Koeficient u členu 𝑥² je 1, a první rovnice proto bude `1 = koeficienty u členů s 𝑥² na pravé straně`. A tak dále.
 
-* Tipy na konec:
-  
-  * Narazíme-li ve jmenovateli na 𝑥², můžeme na něj pohlížet jako na (𝑥 - 0)²
-  
-  * Máme-li ve jmenovateli výraz <b>-</b>𝑎𝑥²±𝑏𝑥±𝑐, který se teprve pomocí kvadratické rovnice pokusíme rozložit na součin dvou dvojčlenů, může se vyplatit vynásobit čitatel a jmenovatel minus jedničkou
+Tip: Narazíme-li ve jmenovateli na 𝑥², můžeme na něj pohlížet jako na (𝑥 - 0)².
 
-//TODO
+## Rozklad na parciální zlomky pro vytvořující funkce
+
+Při převodu obyčejné vytvořující funkce na explicitní tvar posloupnosti se nám hodí mít zlomky ve tvaru 1/(1-𝑟𝑥). Máme-li zlomek s polynomem druhého stupně ve jmenovateli a zkusíme z něj pomocí kvadratické rovnice a rozkladu na parciální zlomky udělat součet dvou jednodušších zlomků, nemusí nám nutně vyjít zlomky ve výše uvedeném tvaru. Můžeme ale zvolit obecnější postup, kterým si tento tvar zajistíme:
+
+![$$\begin{align*}\frac{\cdots}{ax^2+bx+c}&=\frac{A}{1-\alpha x}+\frac{B}{1-\beta x}\\\\^*\!\implies ax^2+bx+c&=(1-\alpha x)(1-\beta x)=\\&=\alpha\beta\cdot x^2+(-\alpha-\beta)\cdot x+1\\\\^{**}\!\implies\cdots&=A(1-\beta x)+B(1-\alpha x)=\\&=(A+B)+(-A\beta-B\alpha)\cdot x\end{align*}$$](../../svg/misc/rozklad_parcialni_zlomky-93ce2d5602.svg)
+
+Výsledné dva zlomky chceme ve tvaru 𝐴/(1-<i>α</i>𝑥)+𝐵/(1-<i>β</i>𝑥), a proto se musí součin jejich jmenovatelů rovnat původnímu jmenovateli. Podle původního jmenovatele tedy vypočítáme konkrétní hodnoty pro <i>α</i> a <i>β</i>. Poté už můžeme vypočítat samotné 𝐴 a 𝐵.
+
+_Příklad:_
+
+![$$\begin{align*}\frac{1-x}{1-2x-x^2}&=\frac{A}{1-\alpha x}+\frac{B}{1-\beta x}\\\\^*\!\implies 1-2x-x^2&=\alpha\beta\cdot x^2+(-\alpha-\beta)\cdot x+1\\-2&=-\alpha-\beta\\-1&=\alpha\beta\end{align*}$$](../../svg/misc/rozklad_parcialni_zlomky-99e4f719c4.svg)
+
+Z první rovnice odvodíme <i>β</i>=2-<i>α</i> a to dosadíme do druhé. Vyjde nám <i>α</i>=1±√(2), vybereme si jedno řešení (<i>α</i>=1+√(2)) a dopočítáme <i>β</i> = 2-<i>α</i> = 2-1-√(2) = 1-√(2).
+
+![$$\begin{align*}^{**}\!\implies 1-x&=(A+B)+(-A\beta-B\alpha)\cdot x\\1&=A+B\\-1&=-A\beta-B\alpha\end{align*}$$](../../svg/misc/rozklad_parcialni_zlomky-d21fce44de.svg)
+
+Z první rovnice odvodíme 𝐵=1-𝐴 a to dosadíme do druhé. Vyjde nám 𝐴=(1-<i>α</i>)/(<i>β</i>-<i>α</i>), po dosazení alfy a bety nám vyjde 𝐴=1/2. Dopočítáme 𝐵 = 1-𝐴 = 1-1/2 = 1/2 a máme hotovo.
+
+![math](../../svg/misc/rozklad_parcialni_zlomky-cc7f1e7a56.svg)
+
+Tuto vytvořující funkci můžeme pak snadno převést na explicitní tvar posloupnosti 𝑎<sub>𝑛</sub> = 1/2 ⋅ ((1 + √(2))<sup>𝑛</sup> + (1 - √(2))<sup>𝑛</sup>).

@@ -154,7 +154,7 @@ A = ⎡3  0⎤,     ⎡𝑥₀⎤ = ⎡1⎤
     ⎣1  2⎦      ⎣𝑦₀⎦   ⎣0⎦
 ```
 
-* __S1.__ Vypočteme vlastní čísla a vlastní vektory matice 𝒜 (viz [rychlejší způsob určení vlastních čísel a vektorů pro matice 2×2](../lingebra/vlastni_vektory.MD#rychlej%C5%A1%C3%AD-zp%C5%AFsob-ur%C4%8Den%C3%AD-vlastn%C3%ADch-%C4%8D%C3%ADsel-pro-matice-22)), vyjde nám:
+* __S1.__ Vypočteme vlastní čísla a vlastní vektory matice 𝒜 (viz [rychlejší způsob určení vlastních čísel a vektorů pro matice 2×2](../lingebra/vlastni_vektory.MD#rychlejší-způsob-určení-vlastních-čísel-pro-matice-22)), vyjde nám:
 
 Vlastní číslo 3 s vlastním vektorem (1;1)<br>
 Vlastní číslo 2 s vlastním vektorem (0;1)
@@ -214,7 +214,8 @@ _Příklad:_ Pomocí obyčejné vytvořující funkce najděte explicitní tvar 
 
 Σ<sub>𝑛≥0</sub>𝑎<sub>𝑛+1</sub>𝑥<sup>𝑛+1</sup> - Σ<sub>𝑛≥0</sub>𝑎<sub>𝑛</sub>𝑥<sup>𝑛+1</sup> = Σ<sub>𝑛≥0</sub>2<sup>𝑛</sup>𝑥<sup>𝑛+1</sup>
 
-* __V2.__ V každém členu srovnáme horní index 𝑥 s dolním indexem 𝑎 (vytkneme potřebnou mocninu 𝑥 ze sumy); napravo chceme 𝑥<sup>𝑛</sup>
+* __V2.__ V každém členu srovnáme horní index 𝑥 s dolním indexem 𝑎 (vytkneme potřebnou mocninu 𝑥 ze sumy)
+  * Na pravé straně rovnice (pokud je nenulová) chceme 𝑥<sup>𝑛</sup>
 
 Σ<sub>𝑛≥0</sub>𝑎<sub>𝑛+1</sub>𝑥<sup>𝑛+1</sup> - 𝑥 ⋅ Σ<sub>𝑛≥0</sub>𝑎<sub>𝑛</sub>𝑥<sup>𝑛</sup> = 𝑥 ⋅ Σ<sub>𝑛≥0</sub>2<sup>𝑛</sup>𝑥<sup>𝑛</sup>
 
@@ -256,4 +257,42 @@ _Poznámka:_ Pozor na znaménka / pořadí členů: `1/(1 - 2𝑥) ⇝ 2ⁿ` ∧
 
 Zavedeme 𝐹 = Σ<sub>𝑛≥0</sub>𝑎<sub>𝑛</sub>𝑥<sup>𝑛</sup> ∧ 𝐺 = Σ<sub>𝑛≥0</sub>𝑏<sub>𝑛</sub>𝑥<sup>𝑛</sup> a použijeme dosazovací metodu.
 
-//TODO
+_Příklad:_ Pomocí vytvořujících funkcí najděte explicitní tvar posloupností daných vztahy 𝑎<sub>𝑛+1</sub> = 𝑎<sub>𝑛</sub> + 2𝑏<sub>𝑛</sub> ∧ 𝑏<sub>𝑛+1</sub> = 𝑎<sub>𝑛</sub> + 𝑏<sub>𝑛</sub> s počátečními podmínkami 𝑎₀=1 ∧ 𝑏₀=0.
+
+* Po provedení kroků __V0.__ až __V3.__ a dosazení počátečních podmínek z první rovnice dostáváme:
+
+𝐹 - 1 - 𝑥𝐹 - 2𝑥𝐺 = 0
+
+* Druhou rovnici převedeme stejným způsobem a navíc si vyjádříme samotné 𝐺:
+
+𝐺 - 𝑥𝐹 - 𝑥𝐺 = 0<br>
+𝐺(1-𝑥) = 𝑥𝐹<br>
+𝐺 = (𝑥𝐹)/(1-𝑥)
+
+* 𝐺 dosadíme do první rovnice a vyjádříme samotné 𝐹:
+
+𝐹 - 1 - 𝑥𝐹 - (2𝑥²𝐹)/(1-𝑥) = 0 &emsp;&emsp;&emsp;&emsp;&emsp; // rovnici vynásobíme 1-𝑥<br>
+𝐹 - 𝐹𝑥 - 1 + 𝑥 - 𝑥𝐹 + 𝑥²𝐹 - 2𝑥²𝐹 = 0<br>
+𝐹(1 - 𝑥 - 𝑥 + 𝑥² - 2𝑥₂) = 1 - 𝑥<br>
+__𝐹 = (1-𝑥)/(1-2𝑥-𝑥²)__ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp; // tento tvar později dosadíme do pravé strany vyjádřeného 𝐺
+
+* [Rozložíme 𝐹 na parciální zlomky](../misc/rozklad_parcialni_zlomky.MD#rozklad-na-parciální-zlomky-pro-vytvořující-funkce) a ty převedeme na 𝑎<sub>𝑛</sub>:
+
+𝐹 = (1/2)/(1-(1+√(2))𝑥) + (1/2)/(1-(1-√(2))𝑥)<br>
+𝑎<sub>𝑛</sub> = 1/2 ⋅ ((1 + √(2))<sup>𝑛</sup> + (1 - √(2))<sup>𝑛</sup>)
+
+* Dosadíme 𝐹 do pravé strany vyjádřeného 𝐺:
+
+𝐺 = (𝑥𝐹)/(1-𝑥) = 𝐹 ⋅ (𝑥)/(1-𝑥) = (1-𝑥)/(1-2𝑥-𝑥²) ⋅ (𝑥)/(1-𝑥) = (𝑥)/(1-2𝑥-𝑥²)
+
+* Rozložíme 𝐺 na parciální zlomky a ty převedeme na 𝑏<sub>𝑛</sub>:
+
+𝐺 = (1/(2√(2)))/(1-(1+√(2))𝑥) - (1/(2√(2)))/(1-(1-√(2))𝑥)<br>
+𝑏<sub>𝑛</sub> = 1/(2√(2)) ⋅ ((1 + √(2))<sup>𝑛</sup> - (1 - √(2))<sup>𝑛</sup>)
+
+Ve Wolfram Mathematica lze příklad vypočítat příkazem
+
+```mathematica
+(* Posloupnost s označením 'b' se Mathmemátice nelíbí, proto raději volíme 'x' a 'y'. *)
+RSolve[{x[n+1]==x[n]+2y[n], y[n+1]==x[n]+y[n], x[0]==1, y[0]==0}, {x, y}, n]
+```
