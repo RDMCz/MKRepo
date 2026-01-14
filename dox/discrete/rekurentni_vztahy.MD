@@ -78,8 +78,8 @@ Obecné řešení NLRV má tvar 𝑎<sub>𝑛</sub> = 𝑎<sub>𝑛</sub><sup>(�
   * Nakonec je potřeba zkontrolovat, zdali některý ze sčítanců návrhu zkušebního řešení není řešením HLRV. Jinými slovy, zdali neexistuje způsob jak nastavit „homogenní konstanty“, aby se 𝑎<sub>𝑛</sub><sup>(𝐻)</sup> rovnalo některému z členů našeho návrhu. Pokud ano, musíme náš celý návrh vynásobit 𝑛-kem a zkusit znovu. Náš návrh násobíme 𝑛-kem do té doby, než žádný člen návrhu (po roznásobení) neřeší HLRV.
 
 * __P1.__ Dosadíme zkušební řešení do zadání a spočteme „partikulární konstanty“
-  * Dosazujeme stylem, že všechny členy 𝑎<sub>𝑛±𝑘</sub> nahradíme za zkušební řešení, ale v každém zkušebním řešení nahradíme 𝑛 za dolní index konkrétního nahrazovaného členu (obsah dolního indexu mějme v závorce).
-  * Například pokud je zkušební řešení 𝐴𝑛, pak do dvojčlenu 2𝑎<sub>𝑛+1</sub> - 3𝑎<sub>𝑛</sub> dosadíme následovně: 2𝐴(𝑛+1) - 3𝐴𝑛.
+  * Dosazujeme stylem, že všechny členy 𝑎<sub>𝑛±𝑘</sub> nahradíme za zkušební řešení, ale v každém dosazeném zkušebním řešení nahradíme 𝑛 za dolní index konkrétního nahrazovaného členu (obsah dolního indexu mějme v závorce).
+  * Například: Pokud je zkušební řešení 𝐴𝑛, pak do dvojčlenu 2𝑎<sub>𝑛+1</sub> - 3𝑎<sub>𝑛</sub> dosadíme následovně: 2𝐴(𝑛+1) - 3𝐴𝑛.
   * (Dosazujeme pouze za členy 𝑎<sub>𝑛±𝑘</sub>, pravou stranu zadání opisujeme)
 
 * __P2.__ Dosadíme spočtené „partikulární konstanty“ do zkušebního řešení a sestavíme 𝑎<sub>𝑛</sub> = 𝑎<sub>𝑛</sub><sup>(𝐻)</sup> + 𝑎<sub>𝑛</sub><sup>(𝑃)</sup>
@@ -148,6 +148,9 @@ V této sekci uvažujeme soustavu dvou homogenních rekurencí druhého řádu.
 _Příklad:_ Najděte explicitní tvar posloupností daných vztahy 𝑥<sub>𝑛+1</sub> = 3𝑥<sub>𝑛</sub> ∧ 𝑦<sub>𝑛+1</sub> = 𝑥<sub>𝑛</sub> + 2𝑦<sub>𝑛</sub> s počátečními podmínkami 𝑥₀=1 ∧ 𝑦₀=0.
 
 * __S0.__ Ze zadání vytvoříme matici konstant 𝒜 a vektor počátečních podmínek x̰₀
+
+𝑥<sub>𝑛+1</sub> = 3𝑥<sub>𝑛</sub> + 0𝑦<sub>𝑛</sub> ⇝ 1. řádek matice `⎡3  0⎤`<br>
+𝑦<sub>𝑛+1</sub> = 1𝑥<sub>𝑛</sub> + 2𝑦<sub>𝑛</sub> ⇝ 2. řádek matice `⎣1  2⎦`
 
 ```text
 A = ⎡3  0⎤,     ⎡𝑥₀⎤ = ⎡1⎤
@@ -221,7 +224,7 @@ _Příklad:_ Pomocí obyčejné vytvořující funkce najděte explicitní tvar 
 
 * __V3.__ Převedeme členy na vytvořující funkce podle vztahu 𝐹 = Σ<sub>𝑛≥0</sub>𝑎<sub>𝑛</sub>𝑥<sup>𝑛</sup>; pravou stranu podle katalogu
   * Pokud nějaký člen „začíná sumovat později“, je potřeba od daného 𝐹 odečíst prvních 𝑘 prvků sumy:
-    * Σ<sub>𝑛≥0</sub>𝑎<sub>𝑛+𝑘</sub>𝑥<sup>𝑛+𝑘</sup> = 𝐹 - 𝑎₀ - 𝑎₁𝑥 - 𝑎₂𝑥³ - ⋯ - 𝑎<sub>𝑘-1</sub>𝑥<sup>𝑘-1</sup>
+    * Σ<sub>𝑛≥0</sub>𝑎<sub>𝑛+𝑘</sub>𝑥<sup>𝑛+𝑘</sup> = 𝐹 - 𝑎₀ - 𝑎₁𝑥 - 𝑎₂𝑥² - ⋯ - 𝑎<sub>𝑘-1</sub>𝑥<sup>𝑘-1</sup>
 
 (𝐹 - 𝑎₀) - 𝑥𝐹 = 𝑥 ⋅ 1/(1 - 2𝑥)
 
@@ -269,7 +272,7 @@ _Příklad:_ Pomocí vytvořujících funkcí najděte explicitní tvar posloupn
 𝐺(1-𝑥) = 𝑥𝐹<br>
 𝐺 = (𝑥𝐹)/(1-𝑥)
 
-* 𝐺 dosadíme do první rovnice a vyjádříme samotné 𝐹:
+* Dosadíme 𝐺 do první rovnice a vyjádříme samotné 𝐹:
 
 𝐹 - 1 - 𝑥𝐹 - (2𝑥²𝐹)/(1-𝑥) = 0 &emsp;&emsp;&emsp;&emsp;&emsp; // rovnici vynásobíme 1-𝑥<br>
 𝐹 - 𝐹𝑥 - 1 + 𝑥 - 𝑥𝐹 + 𝑥²𝐹 - 2𝑥²𝐹 = 0<br>

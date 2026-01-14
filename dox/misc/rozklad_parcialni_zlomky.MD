@@ -10,7 +10,7 @@ Platí:
 
 Máme-li ve jmenovateli 𝑘-tou mocninu polynomu prvního stupně, pak budeme mít 𝑘 parciálních zlomků, v jejichž jmenovatelích se postupně zvyšuje mocnina původního polynomu od 1 do 𝑘. V čitatelích jsou konstanty, které budou dopočítány.
 
-Máme-li ve jmenovateli polynom druhého stupně, postup je stejný až na tvar čitatelů, který je v tomto případě 𝐴𝑥 + 𝐵.
+Máme-li ve jmenovateli monický polynom druhého stupně, postup je stejný až na tvar čitatelů, který je v tomto případě 𝐴𝑥 + 𝐵.
 
 Máme-li ve jmenovateli součin více polynomů (nebo jejich mocnin), pak výsledný součet obsahuje parciální zlomky pro každý polynom zvlášť. Např.:
 
